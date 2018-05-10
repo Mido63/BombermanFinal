@@ -1,4 +1,5 @@
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,12 +19,37 @@ public class IBomberman extends GameEngine
 	private static Player[] players;
 	private static int AIDifficulty; //TODO: Dit variable kan nog worden gebruik mits we tijd over hebben.
 
+	
 	public IBomberman() throws Exception
 	{
 		frame = new JFrame( "Bomberman" );
 		JPanel panel = (JPanel) frame.getContentPane();
 		
 		panel.setLayout( new GridLayout(13, 15));
+		
+		final GameEngine applet = new GameEngine() {
+			
+			@Override
+			public void update() {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void setupGame() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+		
+		applet.init();
+		panel.add(applet);
 		
 		squares = new JLabel[13][15];
 		
@@ -39,7 +65,7 @@ public class IBomberman extends GameEngine
 		
 		frame.setContentPane(panel);
 		
-		frame.setSize(750, 650);
+		frame.setSize(applet.getSize().width, applet.getSize().height + 200); //750, 650
 		
 		frame.setVisible(true);
 		
@@ -53,6 +79,43 @@ public class IBomberman extends GameEngine
 		playerSetup();
 		initializeSound();
 	}
+	
+//	@Override
+//	public void setupGame() {
+//		// TODO Auto-generated method stub
+//		int worldWidth = 750;
+//		int worldHeight = 650;
+//		
+//		initializeSound();
+//		try 
+//		{
+//			board = new Map();
+//		} 
+//		catch (Exception e) 
+//		{
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		playerSetup();
+//		
+//		createViewWithoutViewport(worldWidth, worldHeight);
+//	}
+//	
+//	private void createViewWithoutViewport(int screenWidth, int screenHeight)
+//	{
+//		View view = new View(screenWidth, screenHeight);
+//		
+//		setView(view);
+//		size(screenWidth, screenHeight);
+//	}
+//	
+//	
+//
+	@Override
+	public void setup() {
+		// TODO Auto-generated method stub
+	}
+	
 	
 	public void addListener( BombermanListener listener )
 	{
@@ -207,7 +270,7 @@ public class IBomberman extends GameEngine
 	{
 		return players;
 	}
-	
+
 	@Override
 	public void setupGame() {
 		// TODO Auto-generated method stub
@@ -219,6 +282,14 @@ public class IBomberman extends GameEngine
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 	
 	
 }

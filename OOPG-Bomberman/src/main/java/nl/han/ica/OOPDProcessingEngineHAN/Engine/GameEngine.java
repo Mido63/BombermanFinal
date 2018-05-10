@@ -18,6 +18,7 @@ import processing.core.PVector;
 import processing.event.MouseEvent;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.Vector;
 
 /**
@@ -25,7 +26,7 @@ import java.util.Vector;
  * 
  * This engine is created by: Bram Heijmink, Jeffrey Haen, Joost Elshof, Kenny Ligthart, Mark Vaesen & Nico Smolders.
  */
-public abstract class GameEngine extends PApplet {
+public abstract class GameEngine extends PApplet implements ActionListener{
 
     /**
      * A vectorlist that holds all GameObjects.
