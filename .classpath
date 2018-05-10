@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="nl/han/ica/bomberman/" kind="src" path="OOPG-Bomberman/src/main/java"/>
+	<classpathentry kind="src" path="OOPG-Bomberman/src/main/java/nl/han/ica/bomberman"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/core/2.2.1/core-2.2.1.jar"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/gifanimation/1.0/gifanimation-1.0.jar"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/sound/1.0/sound-1.0.jar"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/sound/jl/1.0/jl-1.0.jar"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/sound/jsminim/1.0/jsminim-1.0.jar"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/sound/minim/1.0/minim-1.0.jar"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/sound/mp3spi/1.9.4/mp3spi-1.9.4.jar"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/sound/tritonus_aos/1.9.4/tritonus_aos-1.9.4.jar"/>
+	<classpathentry kind="lib" path="OOPG-Bomberman/lib/processing/sound/tritonus_share/1.0/tritonus_share-1.0.jar"/>
+	<classpathentry kind="output" path="OOPG-Bomberman/target/classes"/>
+</classpath>
